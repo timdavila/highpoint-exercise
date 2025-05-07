@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Highpoint Exercise
+## Current State
+Objects are displayed in a paginated view, and clicking one brings up a modal with more details about the piece.
+Objects can be filtered by department. When content is being loaded that is communicated to the user and furthur action is blocked. If there isn't an image to display, I show a fallback. On mobile, the gallery is displayed in two columns, and on larger screens it's displayed in five.
+
+# Future Improvement
+Loading is slow, and we should only fetch the current page of results instead of everything. We could potentially cache results and/or pre fetch the next page of results to cut down on load times.
+
+The UI could be a lot nicer, and display more about each piece.
+
+I could add a router and the details view could be its own page with unique URLs for each piece.
+
+There's currently no logic to determine the number of pages in a result set, which can lead to navigating beyond the number of results. I could add this and prevent the Next button being clicked when we are on the last page.
+
+I kept getting errors when trying to use the search endpoint and was unable to implement the search by title/ID feature due to this.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
