@@ -28,7 +28,7 @@ const Gallery: React.FC = () => {
     const handlePageChange = async (newPage: number) => {
         if (newPage < 0) return;
         setLoading(true);
-        const fetchedPhotos = await list(newPage);
+        const fetchedPhotos = await list(newPage, selectedDepartment);
         if (fetchedPhotos.length > 0) {
             setPhotos(fetchedPhotos);
             setCurrentPage(newPage);
