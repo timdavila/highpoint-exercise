@@ -17,7 +17,8 @@ const Gallery: React.FC = () => {
     useEffect(() => {
         const fetchPhotosByDepartment = async () => {
             setLoading(true);
-            const fetchedPhotos = await list(0, selectedDepartment);
+            setCurrentPage(0);
+            const fetchedPhotos = await list(currentPage, selectedDepartment);
             setPhotos(fetchedPhotos);
             setLoading(false);
         };
